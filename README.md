@@ -1,8 +1,7 @@
 - 👋 Hi, I’m @JordyToke
 - 👀 I have a creative background in design and VFX for games.
-- 🌱 I’m currently improving my programming skills
-- I have experience in C, Java, C#, python + Flask + pyhtml, (javaScript, HTML + CSS, ReactJS, React-Native)
-- 💞️ I’m looking to collaborate on apps, games, plugins and more
+- 🌱 I’m currently improving my knowledge of frontend libraries and frameworks in a move toward fullstack development. 
+- I have experience in C, Java, C#, python (Flask, pyHTML), javaScript, HTML + CSS, ReactJS, React-Native.
 - 📫 Reach me @ jordyn.toke@gmail.com
 
 <!---
