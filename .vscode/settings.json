@@ -1,0 +1,6 @@
+{
+    "[html]": {
+        "editor.wordWrap": "wordWrapColumn"
+    },
+    "svg.preview.background": "transparent"
+}

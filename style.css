@@ -1,0 +1,31 @@
+
+#worldmap {
+    overflow: scroll;
+    scrollbar-width: none;
+    width: 80%;
+    height: 600px;
+    margin: 0 auto;
+}
+.mapimage {
+    width: 2400px;
+    height: 1200px;
+    position: relative;
+}
+svg {
+    background-image: url("./resources/images/Kradaal/diffuse.png");
+    pointer-events: all;
+    #c path {
+        fill-rule: nonzero;
+        fill: rgba(255 0 0 1);
+        stroke: red;
+    }
+}
+object {
+    cursor: pointer;
+}
+object.land {
+    background-image: url("./resources/images/Kradaal/diffuse.png");
+    padding: 0px;
+    margin: -4px;
+    }
+}
