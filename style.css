@@ -1,19 +1,22 @@
 
+/* global vars */
+:root {
+  /* insert global vars here */
+}
+
+/* document style begins */
+
 html {
   color: #aaa;
-  font-size: medium;
+  font-size: small;
   margin: 0;
   padding: 0;
+  font-family: "PT sans";
 }
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: "Nunito";
-}
-
-p {
-  font-family: "PT sans";
-  margin: 0;
 }
 
 body {
@@ -25,13 +28,16 @@ body {
 /* Base Tag Styling */
 
 a {
-  color: #89f;
-  text-decoration: none;
+  color: currentColor;
+  text-decoration: underline solid red 0.5pt;
   &:visited {
-    text-decoration: dashed line-through;
+    text-decoration-color: currentColor;
   }
   &:hover {
-    color: #bcf;
+    text-shadow: 0 0 1pt black;
+  }
+  &:active {
+
   }
 }
 
@@ -48,7 +54,7 @@ header {
 /* page navigation bar */
 
 nav {
-  margin: 0 auto;
+  z-index: 10;
   height: auto;
   width: 100%;
   position: sticky;
@@ -65,7 +71,14 @@ nav {
       a {
         font-family: "PT sans";
         font-size: 2em;
-        font-variant: small-caps;
+        color: #89f;
+        text-decoration: none;
+        &:visited {
+      
+        }
+        &:hover {
+          color: #bcf;
+        }
         &:hover {
           font-weight: bold;
         }
@@ -92,6 +105,51 @@ main {
   }
 }
 
+/* custom text-book paper and pen styles */
+
+.biro {
+  font-family: "Reenie Beanie", cursive;
+  color: darkblue;
+  mix-blend-mode: multiply;
+  opacity: 80%;
+  filter: none;
+}
+.a4paper {
+  --paper: linen;
+  max-width: 48em;
+  background-color: var(--paper);
+  box-shadow: 1px 1px 2px black;
+  border: 1px linen solid;
+}
+
+ .ruled {
+  /* ruler variables */
+  font-size: 16pt; /* changing font-size will adjust ruled lines accordingly */
+  --ruled-color: skyblue;
+  --ruled: repeating-linear-gradient(transparent, transparent 0.9em, var(--ruled-color) 0.95em, transparent 1em);
+  /* ruler styling */
+  background-image: var(--ruled);
+  line-height: 1em;
+  padding: 0.12em 0.5em;
+
+  &.margin {
+    /* margin variables */
+    --margin-color: red;
+    --margin-position: 2em;
+    --margin: linear-gradient(to right, transparent var(--margin-position), var(--margin-color) calc(var(--margin-position) + 0.05em), transparent calc(var(--margin-position) + 0.1em));
+    padding: 0.12em calc(var(--margin-position) + 0.5em);
+    background-image: var(--margin), var(--ruled);
+  }
+ }
+
+ .margin {
+  /* margin variables */
+  --margin-color: red;
+  --margin-position: 2em;
+  --margin: linear-gradient(to right, transparent var(--margin-position), var(--margin-color) calc(var(--margin-position) + 0.05em), transparent calc(var(--margin-position) + 0.1em));
+  padding: 0.12em calc(var(--margin-position) + 0.5em);
+  background: var(--margin), var(--paper);
+}
 /* page footer */
 
 footer {
